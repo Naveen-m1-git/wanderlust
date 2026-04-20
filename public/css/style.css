@@ -1,0 +1,148 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-airbnb{
+    color:#fe424b;
+    font-size: 2rem;
+}
+.nav-link{
+    color:#222222 !important;
+}
+/* footer  */
+.f-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-links a:hover{
+    text-decoration: underline;
+}
+.f-socials{
+    width: 100%;
+    font-size: 1.2rem;
+}
+.f-socials i{
+    margin-right: 1rem;
+}
+.f-links,.f-brand{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    
+}
+/* card */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+   border-radius: 1rem !important;
+   width: 100%;
+   object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text{
+    font-weight: 400 !important;
+}
+
+
+/* card hover */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+/* newpage */
+.add-btn{
+    background-color: #fe424b !important;
+    border: none !important;
+}
+
+/* show page */
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Starability CSS for star ratings */
+.starability-slot {
+  position: relative;
+  display: inline-block;
+}
+
+.starability-slot > input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.starability-slot > label {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+  margin: 0 2px;
+}
+
+.starability-slot > label:before {
+  content: '\2605';
+  font-size: 2em;
+  line-height: 1;
+}
+
+.starability-slot > input:checked ~ label {
+  color: #f90;
+}
+
+.starability-slot > input:checked + label {
+  color: #f90;
+}
+
+.starability-slot > input:checked ~ label:before,
+.starability-slot > input:checked + label:before {
+  content: '\2605';
+}
+
+.starability-slot > input:focus + label {
+  color: #f90;
+}
+
+.starability-slot > input:focus ~ label {
+  color: #ccc;
+}
+
+.starability-slot > input:focus ~ label:before,
+.starability-slot > input:focus + label:before {
+  content: '\2605';
+}
+

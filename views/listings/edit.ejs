@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') -%>
+<div class="row col-8 offset-2 mt-3">
+    <h3>EDIT YOUR LISTING</h3>
+   <form method="post" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+    <div>
+    <label for="title" class="form-label" >Title</label>
+<input name="listing[title]" value="<%=listing.title%>" type="text" class="form-control" required/>
+<div class="invalid-feedback">Title should be valid</div>
+    </div>
+     <div>
+        <label for="description" class="form-label">description</label>
+            <textarea name="listing[description]" class="form-control" required><%=listing.description%></textarea>
+            <div class="invalid-feedback">descripton shold be short</div>
+     </div>
+<br>
+<div class="mb-3">
+   <img src="<%=originalImageurl%>" style="height:100px; width:200px" alt="listing image">
+    </div>
+
+     <div class="mb-3">
+    <label for="image" class="form-label">Upload Image</label>
+    <input name="listing[image]" value="<%=listing.image%>" type="file" class="form-control" />
+    </div>
+
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="listing[price]" value="<%=listing.price%>"type="number" class="form-control" required/>
+                <div class="invalid-feedback">Price should be valid</div>
+        </div>
+        <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input name="listing[country]" value="<%=listing.country%>" type="text" class="form-control" required/>
+                <div class="invalid-feedback">country should be valid</div>
+        </div>
+    </div>
+    <div>
+        <label for="location" class="form-label"></label>
+        <input name="listing[location]" value="<%=listing.location%>"type="text" class="form-control" required/>
+        <div class="invalid-feedback">loca should be valid</div>
+    </div>
+    <br>
+        <button class="btn btn-dark add-btn mb-5">EDIT</button>
+   </form>
+   </div>
