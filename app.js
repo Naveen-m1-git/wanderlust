@@ -75,6 +75,7 @@ app.use((req, res, next) => {
 
 // Root route
 app.get("/", (req, res) => {
+    console.log("Root route hit");
     res.redirect("/listings");
 });
 
